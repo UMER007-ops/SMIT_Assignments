@@ -1,0 +1,59 @@
+
+body {
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  tr:nth-child(even) td {
+    opacity: 0.95;
+  }
+  
+  tr:hover td {
+    filter: brightness(1.1);
+    transition: all 0.3s ease;
+  }
+  
