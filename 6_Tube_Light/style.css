@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.tubeLight{
+    height: 50px;
+    width: 700px;
+    margin-left: 300px;
+    margin-top: 50px;
+    background: radial-gradient(circle at center, #ffd700 60%, #b8860b 100%);
+    border-radius: 20px;
+    box-shadow: 
+    0 0 20px #ffd700,
+    0 0 40px #ffd700,
+    0 0 60px #ffd700,
+    0 0 100px #ffd700;
+    position: absolute;
+}
+p{
+    position: relative;
+    margin-left: 170px;
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: -2px;
+}
+
+

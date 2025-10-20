@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 420px;
+    margin-top: 60px;
+    background-color: gold;
+}
+
+.child{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    border-radius: 50%;
+    right:70px;
+    background-color: dodgerblue;
+    mix-blend-mode: screen;
+}
+
