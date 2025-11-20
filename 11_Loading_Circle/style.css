@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --size: 200px;
+    --speed: 10s;
+    --offset: 50px;
+}
+
+.tracker{
+    position: relative;
+    width: 100vw;
+    height: calc(var(--size) * 2);
+    overflow: hidden;   /* hides the circle when off-screen */
+    background-color: blueviolet;
+} 
+
+.loader{
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fff 0%, #ccc 50%); /* subtle shading */
+    transform: translateY(-50%);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    animation: spin 0.8s linear infinite, travel var(--speed) linear infinite;
+    will-change: transform, opacity;
+}
+@keyframes spin{
+    to { transform: translateY(-50%) rotate(360deg);}
+}
+
+@keyframes travel {
+    0% {
+      /* start off-screen left, centered vertically, small & invisible */
+      transform: translateX(calc(-1 * var(--offset))) translateY(-50%) scale(0.6);
+      opacity: 0;
+    }
+  
+    4% {
+      /* appear at the left edge */
+      transform: translateX(0px) translateY(-50%) scale(1);
+      opacity: 1;
+    }
+  
+    96% {
+      /* just before exiting at the right; place left edge so the circle's right edge is near viewport right */
+      transform: translateX(calc(100vw - var(--size) + var(--offset))) translateY(-50%) scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      /* fully off-screen right */
+      transform: translateX(calc(100vw + var(--offset))) translateY(-50%) scale(0.6);
+      opacity: 0;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
